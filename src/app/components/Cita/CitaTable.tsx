@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 
 interface Cita {
   idCita: number;
-  fecha: Date;
+  fecha: string;
   paciente: any; // Reemplaza 'any' con el tipo de datos correcto de la entidad Paciente
   medico: any; // Reemplaza 'any' con el tipo de datos correcto de la entidad Medico
 }
@@ -34,7 +34,7 @@ const CitaTable: React.FC<CitaTableProps> = ({ citas }) => {
             key={cita.idCita}
           >
             <td>{cita.idCita}</td>
-            <td>{formatDate(cita.fecha)}</td>
+            <td>{cita.fecha}</td>
             <td>{cita.paciente}</td> {/* Reemplaza 'cita.paciente' con el campo correcto de la entidad Paciente */}
             <td>{cita.medico}</td> {/* Reemplaza 'cita.medico' con el campo correcto de la entidad Medico */}
           </tr>

@@ -49,7 +49,7 @@ const AddCita: React.FC = () => {
       {abierto && (
         <form onSubmit={procesarFormulario} className="text-white">
           <input
-            type="date"
+            type="text"
             name="fecha"
             placeholder="Fecha"
             onChange={cambiarValor}
